@@ -1,5 +1,12 @@
 # Welcome!
 
+## 0: Installation
+In order to install the package and required libraries, go to the project directory and
+use the following bash command:
+```
+$ pip install . 
+```
+
 ## 1: How to use the CLI
 
 In order to train the model with new data use the CLI tool.
