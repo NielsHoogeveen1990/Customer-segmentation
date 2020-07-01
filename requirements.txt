@@ -1,0 +1,15 @@
+numpy
+pandas
+matplotlib
+missingno
+seaborn
+click
+click_pathlib
+flask
+flask_restful
+requests
+flask-cors
+joblib
+sklearn
+pytest
+category_encoders
