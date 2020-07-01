@@ -13,3 +13,4 @@ joblib
 sklearn
 pytest
 category_encoders
+plotly

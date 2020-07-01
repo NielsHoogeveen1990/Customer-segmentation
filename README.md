@@ -14,7 +14,7 @@ The CLI tool works with Click.
 Provide the options, followed by the arguments. 
 For example: 
 ```
-$ navara train-model --data-path 'data/' --model-version 1.1
+$ navara train-model --data-path 'data' --model-version 1.1
 
 ```
 
