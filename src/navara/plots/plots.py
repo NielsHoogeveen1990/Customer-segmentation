@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import seaborn as sns
-import numpy as np
 
 
 def create_distplots(df, cols=4):

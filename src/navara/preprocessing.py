@@ -8,6 +8,7 @@ from navara.utils import log_step
 def read_data(data_path):
     """
     Get data by specifying a datapath where the data is stored.
+    The different dataframes will be read first and subsequently, the duplicates will be dropped.
     :param data_path: data path of the CSV file
     :return: dataframe
     """
@@ -34,6 +35,15 @@ def drop_irrelevant_features(df):
             'id_old']
 
     return df.drop(columns=list(cols))
+
+
+def drop_rows(df):
+    """
+    This function drops the entire rows where the amount of inhabitants is less than 10.
+    :param df: dataframe
+    :return: dataframe
+    """
+    return df.drop(df[abs(df['aantal_inwoners'])<10].index)
 
 
 def drop_missing_values_columns(df):
@@ -143,6 +153,7 @@ def create_categorical_combinations(df):
 def get_df(data_path):
     return (read_data(data_path)
             .pipe(drop_irrelevant_features)
+            .pipe(drop_rows)
             .pipe(drop_missing_values_columns)
             .pipe(make_numeric_features_absolute)
             .pipe(transform_skewed_data)
@@ -155,6 +166,7 @@ def get_df(data_path):
 def get_original_df(data_path):
     return (read_data(data_path)
             .pipe(drop_irrelevant_features)
+            .pipe(drop_rows)
             .pipe(drop_missing_values_columns)
             .pipe(make_numeric_features_absolute)
             )

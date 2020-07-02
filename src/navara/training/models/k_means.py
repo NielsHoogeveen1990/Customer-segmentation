@@ -1,6 +1,6 @@
 from sklearn.cluster import KMeans
 from sklearn.pipeline import make_pipeline, make_union
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.preprocessing import StandardScaler
 from sklearn.impute import KNNImputer, SimpleImputer
 from category_encoders import HashingEncoder
 

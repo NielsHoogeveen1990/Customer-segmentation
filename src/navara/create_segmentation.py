@@ -1,5 +1,4 @@
 import joblib
-from navara.utils import log_step
 from navara.preprocessing import get_df, get_original_df
 
 
